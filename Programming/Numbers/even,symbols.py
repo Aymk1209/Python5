@@ -651,5 +651,152 @@ a=int(input())
 #             count+=1
 #         num+=1
 
-#if a prime number is given print next prime number of it
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#Write a Program to print the smallest digit in a Given Number?
+# n=int(input())
+# l=9
+# if n<=0:
+#     print("Invalid Input.")
+# else:
+#     while(n>0):
+#         r=n%10
+#         if r<l:
+#             l=r
+#         n=n//10
+#     print(f"Smallest Digit in a Given Number is {l}.")
+
+#Write a Program to print the Highest digit in a Given Number?
+# n=int(input())
+# h=0
+# if n<=0:
+#     print("Invalid Input.")
+# else:
+#     while(n>0):
+#         r=n%10
+#         if r>h:
+#             h=r
+#         n=n//10
+#     print(f"Highest Digit in a Given Number is {h}.")
+
+
+
+#Write a Program to Print Count no of Digits in a Given Number?
+# a=int(input())
+# c=0
+# if a==0:
+#     print("InvaliD Input")
+# else:
+#     if a<0:
+#         a=-a
+#         while(a>0):
+#             a=a//10
+#             c=c+1
+#         if c==1:
+#             print(f"Given Number consists of only {c} Digit and it is Negative Value." )
+#         else:
+#             print(f"Given Number consists of {c} Digits and it is Negative Value.")
+#     else:
+#         while a>0:
+#             r=a%10
+#             a=a//10
+#             c=c+1
+#         if c==1:
+#             print(f"Given Number consists of only {c} Digit.")
+#         else:
+#             print(f"Given Number consists of {c} Digits.")
+
+
+#Write a Program to check if the Given Number is Perfect Square or Not a perfect Square?
+# n=int(input())
+# from math import sqrt
+# if n<=0:
+#       print("InvaliD Input")
+# else:
+#     b=int(sqrt(n))
+#     if b*b==n:
+#         print("Given Number is a Perfect Square.")
+#     else:
+#         print("Given Number is Not a Perfect Square.")
+
+
+#Write a Program to Print The Sum of the Even Digits in a Given Number?
+# n=int(input())
+# sum=0
+# if n<=0:
+#     print("Invalid Input")
+# else:
+#     while n>0:
+#         r=n%10
+#         if r%2==0:
+#             sum=sum+r
+#         n=n//10
+#     print(sum)
+
+
+#Write a program to find Sum of first 'n' Natural Numbers Without Using formula?
+# n = int(input())
+# sum = 0
+# if n == 0:
+#     print("InvaLid Input.")
+# elif n < 0:
+#     print(f"Sorry! you have Entered Negative Values.")
+# else:
+#     c = []
+#     for i in range(1, n + 1):
+#         sum = sum + i
+#         if i < n:
+#             c.append(i)
+#         else:
+#             c.append(i)
+#
+#     b = " + ".join(map(str, c))
+#     print(f" Sum of 'N' Natural Numbers is {b} " + "= " + str(sum) + ".")
+
+
+
+#Write a program to find Sum of first 'n' Natural Numbers by Using formula?
+# n=int(input())
+# if n==0:
+#     print("InvaLid Input.")
+# elif n<0:
+#     print("Sorry! you have Entered Negative Values.")
+# else:
+#     d=n*(n+1)/2
+#     e=int(d)
+#     print(f"Sum of 'N' Natural Numbers is {e}.")
+
+
+#Write a program to Find Sum of Digits of a Given Number?
+
+# n=int(input())
+# if n<=0:
+#     print("Invalid Input.")
+# else:
+#     c=[]
+#     while(n>0):
+#         r=n%10
+#         c.append(str(r))
+#         n=n//10
+#     c.reverse()
+#     print(" + ".join(c),end=".")
+
+
+#Write a Program to Print The Sum of all odd Positions in a Given Number?
+# n=int(input())
+# c=0
+# sum=0
+# if n<=0:
+#     print("Invalid Input")
+# else:
+#     while n>0:
+#         r=n%10
+#         c=c+1
+#         if c%2==1:
+#             sum=sum+r
+#         n=n//10
+#     print(sum)
+
+
+
 
