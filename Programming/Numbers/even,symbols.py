@@ -557,5 +557,67 @@ a=int(input())
 #     print(sum)
 
 
+#Write a program to Calculate Power of a Number.
+# (With Pre Defined Method)
+# n1=int(input())
+# n2=int(input())
+# if n1<0 and n2<0:
+#     print("Invalid Inputs")
+# else:
+#     print(f"{n1} Power {n2} value is {n1**n2}",end=".")
+
+
+#Write a program to Count the Number of digits in a Given Number?
+# n=int(input())
+# n1=len(str(n))
+# if n<=10:
+#     print("Invalid Input")
+# else:
+#     print(n1)
+
+#Write a program to check Whether the Given
+# Number(any number of digits) is Armstrong or Not.
+# n=int(input())
+# n1=len(str(n))
+# t=n
+# arm=0
+# if n<=0:
+#     print("Invalid Input")
+# else:
+#     while t>0:
+#         r=t%10
+#         arm=arm+(r**n1)
+#         t=t//10
+#     if arm==n:
+#         print(f"{n} is a Armstrong Number.")
+#     else:
+#         print(f"{n} is Not a Armstrong Number.")
+
+
+#Write a program to swap the two given numbers.
+# ( without using a third variable)
+# n1=int(input())
+# n2=int(input())
+# if n1>n2 or n1<n2:
+#     n1,n2=n2,n1
+#     print(n1)
+#     print(n2)
+
+
+#Write a Program to Check if The given year is Leap Year or not?
+# n=int(input())
+# if n<=0:
+#     print("Given Year is Invalid Input.")
+# else:
+#     if(n%4==0 and n%100!=0)or(n%400==0):
+#         print("Leap Year.")
+#     else:
+#         print("Not a Leap Year.")
+
+
+#
+
+
+
 
 
