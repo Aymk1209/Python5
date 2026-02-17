@@ -6,8 +6,12 @@
 #         print(f"new student has been created. Total students = {Student.total_students}")
 # s1=Student("Narsimha")
 # s2=Student("Devi")
+from calendar import error
 from functools import total_ordering
+from itertools import product
+from operator import itemgetter
 from os import name
+from typing import reveal_type
 
 
 #we should get total amount of LOAN sholud be paid with intrest when we give the no. of months for 0.1 intrest
@@ -87,15 +91,15 @@ from os import name
 #Create a class MathOps with a static method is_even(num) that returns True if the number is even.
 # Then call it both from the class and an instance.
 #
-# class mathops:
-#     @staticmethod
-#     def is_even(num):
-#         if num%2==0:
-#             return True
-#         else:
-#             return False
-# obj=mathops
-# print(obj.is_even(10))
+class mathops:
+    @staticmethod
+    def is_even(num):
+        if num%2==0:
+            return True
+        else:
+            return False
+obj=mathops
+print(obj.is_even(10))
 
 
 
@@ -335,3 +339,333 @@ from os import name
 # Student.update_passing_marks(70)
 # print("After updating passing marks to 70:")
 # print(s1.name,"grade:",Student.grade_category(s1.marks))
+
+
+#11th
+# Q1. Create a class Student that:
+# •	Keeps track of the total number of students created.
+# •	Determines whether a student passed or failed based on a shared passing mark.
+# •	Provides a method to curve marks by increasing everyone’s marks by a percentage.
+# •	Has a utility to convert marks (0–100) into letter grades (A, B, C, etc.).
+# Demonstrate:
+# 1.	Creating multiple students.
+# 2.	Applying a grading curve.
+# 3.	Displaying updated results with letter grades.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#12th
+# #Design a class Product that:
+# •	Maintains a base tax rate applicable to all products.
+# •	Each product has a name and base price.
+# •	Has a method to compute final price including tax.
+# •	Can change tax rate for all products using one method.
+# •	Includes a function to check whether a given price is valid or not (non-negative and realistic).
+# Demonstrate:
+# 1.	Creating multiple products.
+# 2.	Changing the tax rate.
+# 3.	Showing updated prices and validity checks.
+
+# class Product:
+#     tax_rate=0.4
+#     def __init__(self,name,base_price):
+#         self.name=name
+#         self.base_price=base_price
+#     def final_price(self):
+#         return self.base_price+(self.base_price*Product.tax_rate)
+#     @classmethod
+#     def change_products(cls,new_rate):
+#         cls.tax_rate=new_rate
+#     @staticmethod
+#     def is_valid(price):
+#         if price>=0:
+#             return True
+#         else:
+#             return False
+#
+# p1=Product("yogi",1000)
+# print(p1.final_price())
+# Product.change_products(0.2)
+# print(p1.final_price())
+
+
+#13th
+#. Create an Employee class that:
+# •	Keeps a minimum experience required for promotion (shared across all employees).
+# •	Stores employee name, experience, and department.
+# •	Has a method to check eligibility for promotion.
+# •	Provides a function to update promotion criteria globally.
+# •	Offers a general tool that checks if a given department is valid (like “HR”, “Tech”, “Admin”).
+# Demonstrate:
+# 1.	Creating employees from different departments.
+# 2.	Changing promotion criteria.
+# 3.	Displaying eligibility results and department validation
+
+# class Employee:
+#     minimum_experience=5
+#     def __init__(self,name,experience,department):
+#         self.name=name
+#         self.experience=experience
+#         self.department=department
+#     def eligiblity_promotion(self):
+#         if self.experience>Employee.minimum_experience:
+#             print("valid for promotion")
+#         else:
+#             print("not valid")
+#     @classmethod
+#     def update(cls,new_min_exp):
+#         cls.minimum_experience=new_min_exp
+#     @staticmethod
+#     def general_tool(department):
+#         if department=="Hr" or department=="Tech" or department=="Admin":
+#             print("valid department")
+#         else:
+#             print("invalid department ")
+#
+#
+# d1=Employee("Yogi",6,"Tech")
+# d1.eligiblity_promotion()
+# Employee.update(7)
+# d1.eligiblity_promotion()
+# d1.general_tool("Tech")
+
+
+
+#14th
+#. Build a Loan class that:
+# •	Has a common interest rate for all loans.
+# •	Each object stores borrower name and principal.
+# •	Calculates total payable amount.
+# •	Provides a function to update the interest rate.
+# •	Provides a static function to check loan eligibility (e.g., salary > certain threshold).
+
+#1.	Creating multiple loan accounts.
+# 2.	Updating interest rates.
+# 3.	Checking eligibility and total repayment for borrowers.
+
+# class Loan:
+#     common_interest=0.2
+#     def __init__(self,borrower_name,principal):
+#         self.borrower_name=borrower_name
+#         self.principal=principal
+#     def total_amount(self):
+#         return self.principal+(self.principal*Loan.common_interest)
+#     @classmethod
+#     def update_intrest(cls,new_intrest):
+#         cls.common_interest=new_intrest
+#     @staticmethod
+#     def loan_eligibl(salary):
+#         if salary>50000:
+#             print("eligibl for loan")
+#         else:
+#             print("not eligible for loan")
+# b1=Loan("yogi",100000)
+# print("yogi total amount:",b1.total_amount())
+# Loan.update_intrest(0.5)
+# print("after updateing interest to 0.5")
+# print("yogi total amount:",b1.total_amount())
+
+
+#15th
+#Q5. Create a class Course that:
+# •	Tracks total courses created.
+# •	Each course has a title, duration, and enrolled_students.
+# •	Provides a method to enroll a new student.
+# •	Allows updating the minimum duration for a valid course across all instances.
+# •	Has a static function to check if a given duration is realistic (not negative, not too large).
+# Demonstrate:
+# 1.	Creating multiple courses.
+# 2.	Enrolling students.
+# 3.	Updating minimum duration and checking durations.
+
+# class Course:
+#     total_courses=0
+#     minimum_duration=1
+#     def __init__(self,title,duration,enrolled_students):
+#         self.title=title
+#         self.duration=duration
+#         self.enrolled_students=enrolled_students
+#         Course.total_courses +=1
+#     def enroll(self,new_student):
+#         self.enrolled_students.append(new_student)
+#         print(new_student,"enrolled in",self.title)
+#     @classmethod
+#     def update_min_duration(cls,new_duration):
+#         cls.minimum_duration=new_duration
+#         print("Minimum duration updated to:",new_duration)
+#     @staticmethod
+#     def is_realistic_duration(duration):
+#         return 0< duration <=50
+#
+#
+# c1 = Course("Python Full Stack", 6,"yogi")
+# c2 = Course("Data Science", 8,"ravi")
+# print("Total Courses Created:", Course.total_courses)
+# print("Students in Python Full Stack:", c1.enrolled_students)
+# print("Students in Data Science:", c2.enrolled_students)
+# Course.update_min_duration(3)
+# print("Is 5 months realistic?", Course.is_realistic_duration(5))
+# print("Is -2 months realistic?", Course.is_realistic_duration(-2))
+# print("Is 100 months realistic?", Course.is_realistic_duration(100))
+
+
+#16
+#. Design a class Vehicle that:
+# •	Keeps a record of service charge rate common to all vehicles.
+# •	Each vehicle has a model, kilometers_run, and service history.
+# •	Has a function to calculate service charge based on km and rate.
+# •	Provides a method to update the service rate for all vehicles.
+# •	Provides a static tool to check if a vehicle model is eligible for service (not older than 15 years).
+# Demonstrate:
+# 1.	Creating vehicles with different km and models.
+# 2.	Updating the service rate.njm                                                                                                     888888          3
+# 3.	Showing charges and eligibility checks.
+
+
+# class Vehicle:
+#     service_rate=10
+#     def __init__(self,model,km,service_h):
+#         self.model=model
+#         self.km=km
+#         self.service_h=service_h
+#     def total_amt(self):
+#         return Vehicle.service_rate*self.km
+#     @classmethod
+#     def update_service_rate(cls,new_sr):
+#         Vehicle.service_rate=new_sr
+#     @staticmethod
+#     def eligible_for_service(age):
+#         if age<=15:
+#             print("eligible for service ")
+#         else:
+#             print("not eligible for service")
+#
+# v1=Vehicle("honda",20000,["oil,change","break check"])
+# print(v1.model,":", v1.total_amt())
+# Vehicle.update_service_rate(200)
+# print(v1.model,":", v1.total_ amt())
+# v1.eligible_for_service(16)
+
+
+
+#17
+# Build an Inventory class that:
+# •	Tracks the total number of items across all inventories.
+# •	Each instance maintains its own stock dictionary ({"item": quantity}).
+# •	Provides a method to add or remove stock.
+# •	Allows updating a minimum stock threshold globally.
+# •	Offers a static checker to verify if a stock level is below threshold.
+# Demonstrate:
+# 1.	Managing multiple inventories.
+# 2.	Adjusting stock threshold.
+# 3.	Using static validation inside the instance logic.
+
+# class Inventory:
+#     total_items=0
+#     def dict(self,{"item":quantity}):
+#         self.item=item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class Book:
+#     total_books = 0  # class variable
+#
+#     def __init__(self, title, author):
+#         if not Book.is_valid_title(title):
+#             raise ValueError("Title must have at least 3 characters.")
+#
+#         self.title = title
+#         self.author = author
+#         Book.total_books += 1  # increment for every book created
+#
+#     @classmethod
+#     def from_string(cls, book_str):
+#         title, author = book_str.split("-")
+#         return cls(title.strip(), author.strip())
+#
+#     @staticmethod
+#     def is_valid_title(title):
+#         return len(title) >= 3
+#
+#
+# # Example usage
+# b1 = Book("Python Basics", "John Doe")
+# b2 = Book.from_string("AIlm-Andrew Ng")
+#
+# print(b1.title, b1.author)
+# print(b2.title, b2.author)
+# print("Total Books:", Book.total_books)
+
+
+
+class Date:
+    def __init__(self,d,m,y):
+        self.d=d
+        self.m=m
+        self.y=y
+    @classmethod
+    def Usdate_format(cls,date):
+        m,d,y=date.split("/")
+        return cls(d,m,y)
+d1=Date.Usdate_format("12/07/23")
+print(d1.d,d1.m,d1.y,sep=".")

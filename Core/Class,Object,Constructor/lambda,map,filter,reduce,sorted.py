@@ -31,7 +31,6 @@
 # result=list(map(ord,string))
 # print(result)
 
-
 #6th
 # Use filter() to remove all vowels from a string and print the final string.
 # text=input(" ")
@@ -57,4 +56,11 @@
 # print(result)
 
 
+#Use functools.reduce() with a lambda to find the largest number from a given
+# list Dynamically
+
+from functools import reduce
+# list=list(map(int,input("enter numbers:").split()))
+# result= reduce(lambda x,y: x if x>y else y,list)
+# print("larger num:",result)
 
