@@ -190,6 +190,21 @@
 
 
 
+#next prime number of the given number
+# def np(a):
+#     m=a+1
+#     while(True):
+#         fc=0
+#         for i in range(1,m+1):
+#             if(m%i==0):
+#                 fc=fc+1
+#         if fc==2:
+#             print(m)
+#             break
+#         m=m+1
+#
+# a=3
+# print(np(a))
 
 
 

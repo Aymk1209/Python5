@@ -236,3 +236,21 @@
 #             print(num,end="")
 #             count+=1
 #         num+=1
+
+
+
+#next prime number of the given number
+# a=int(input())
+# m=a+1
+# while(True):
+#     fc=0
+#     for i in range(1,m+1):
+#         if(m%i==0):
+#             fc=fc+1
+#     if fc==2:
+#         print(m)
+#         break
+#     m=m+1
+
+
+
