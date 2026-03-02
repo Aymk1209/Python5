@@ -242,5 +242,3 @@
 # draw(car)
 
 
-#10
-# is instance(obj,upi)
