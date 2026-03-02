@@ -19,15 +19,17 @@
 
 
 #__contains__:we can coustomise the init /membership operation:
-class Cvps:
-    def __init__(self):
-        self.students=[]
-    def Addstudent(self,name):
-        self.students.append(name)
-    def __contains__(self, name):
-        return name in self.students
-obj=Cvps()
-obj.Addstudent("yogi")
+# class Cvps:
+#     def __init__(self):
+#         self.students=[]
+#     def Addstudent(self,name):
+#         self.students.append(name)
+#     def __contains__(self, name):
+#         return name in self.students
+
+# obj=Cvps()
+# obj.Addstudent("yogi")
+
 
 
 
