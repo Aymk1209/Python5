@@ -206,6 +206,32 @@
 # a=3
 # print(np(a))
 
+#nearest prime number
+# def p(n):
+#     fc=0
+#     for i in range(1,n+1):
+#         if n%i==0:
+#             fc=fc+1
+#     if fc==2:
+#         return True
+# n=int(input())
+# ap=n+1
+# bp=n-1
+# while(True):
+#     if(p(ap)):
+#         break
+#     ap=ap+1
+# while(bp>=2):
+#     if(p(bp)):
+#         break
+#     bp=bp-1
+# if(n-bp<ap-n):
+#     print(bp)
+# elif(ap-n<n-bp):
+#     print(ap)
+# else:
+#     print(ap,bp)
+
 
 
 
