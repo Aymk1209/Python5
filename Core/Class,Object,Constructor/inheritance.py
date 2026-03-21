@@ -19,7 +19,7 @@
 #
 #
 #
-#
+
 # class A:
 #     def __init__(self, x):
 #         print("inside class A")
@@ -39,7 +39,7 @@
 #         self.y=y
 # obj=D(10,20)
 # print(D.mro())#list
-# # print(D.__mro__)#tuple
+# print(D.__mro__)#tuple
 
 
 
@@ -211,9 +211,38 @@
 #         self.roll=roll
 #         print("student constructor called")
 # s1=Student("yogi",31)
-
+#
 # print(s1.name)
 # print(s1.roll)
+
+
+
+
+
+
+
+
+#Create class University with a class variable and a class method. Inherit it
+# into class College and access the parent’s class variable from the child class.
+class University:
+    uni_name="cmr"
+    @classmethod
+    def m1(cls):
+        print("sdcv",cls.uni_name)
+class Collage(University):
+    def m2(self):
+        print("sdc",Collage.uni_name)
+University.m1()
+Collage.m1()
+
+c1=Collage()
+c1.m1()
+
+
+
+
+
+
 
 
 

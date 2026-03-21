@@ -6,7 +6,7 @@
 #     sum=sum*10+r
 #     n=n//10
 # print(sum)
-from idlelib.macosx import readSystemPreferences
+
 
 #given number is palindrome or not ?
 # n=int(input())
@@ -30,6 +30,7 @@ from idlelib.macosx import readSystemPreferences
 #     rev=0
 #     while(l>0):
 #         r=l%10
+
 #         rev=rev*10+r
 #         l=l//n
 #     if rev==i:
