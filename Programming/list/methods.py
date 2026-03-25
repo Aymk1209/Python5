@@ -17,6 +17,7 @@
 # l=[10,20,40,50]
 # l.insert(2,30)
 # print(l)
+# print(*l)
 
 
 #3
@@ -25,6 +26,10 @@
 # l2=[50,60,70,80]
 # l.extend(l2)
 # print(l)
+
+     #or
+# l3=l+l2
+# print(*l3)
 
 
 #4
@@ -42,13 +47,12 @@
 # #Write a program to remove an element from a list using its index.
 # l=[10,20,30,40,50]
 # a=int(input("enter removing number:"))
-# if a in l:
-#     k=l.index(a)
-#     del l[k]
-#     print(l)
-#
-# else:
-#     print("not found")
+#     if(a>=-(len(l) and a<(len(l))):
+#         l.pop(a)
+#         print(*l)
+#     else:
+#         print("Invalid")
+
 
 
 #6
@@ -116,16 +120,15 @@
 
 
 #11
-#Write a program to print all prime numbers present in a list.
-# l=[1,2,3,4,5,6,7]
-# c=0
-# for i  in range(l):
-#     if i%l==0:
-#         c=c+1
-# if c==2:
-#     print(l)
-
-
+# Write a program to print all prime numbers present in a list.
+# l=list(map(int,input().split()))
+# for i in range(len(l)):
+#     fc=0
+#     for j in range(1,l[i]+1):
+#         if(l[i]%j==0):
+#             fc=fc+1
+#     if fc==2:
+#         print(l[i],end=" ")
 
 
 #12
@@ -143,6 +146,14 @@
 
 #14
 #Write a program to find sum of any two elements which is equal to key value
+# l=list(map(int,input().split()))
+# k=int(input())
+# for i in range(len(l)):
+#     for j in(i+1,len(l)):
+#         if(l[i]+l[j]==k):
+#
+#             print(f"{l[i]},{l[j]}")
+
 
 
 
@@ -163,13 +174,31 @@
 #     if num>h:
 #         h=num
 # print(h)
+        #or
+# l=list(map(int,input().split()))
+# h=l[0]
+# for i in range(len(l)):
+#     if (l[i]>h):
+#         h=l[i]
+# print(h)
+
 
 #16
 #Write a program to find the second largest number in a list
 # l=[1,2,3,4,5,6,7]
 # l.sort(reverse=False)
 # print(l[-2])
-
+                 #or
+# l=list(map(int,input().split()))
+# h1=l[0]
+# h2=h1
+# for i in range(len(l)):
+#     if l[i]>h1:
+#         h2=h1
+#         h1=l[i]
+#     elif l[i]>h2:
+#         h2=l[i]
+# print(h2)
 
 
 #17
@@ -177,16 +206,63 @@
 # l=[1,2,3,4,5,6,7]
 # l.sort(reverse=False)
 # print(l[-3])
+                   #or
+# l=list(map(int,input().split()))
+# h1=l[0]
+# h2=h1
+# h3=h2
+# for i in range(len(l)):
+#     if l[i]>h1:
+#         h3=h2
+#         h2=h1
+#         h1=l[i]
+#     elif l[i]>h2:
+#         h3=h2
+#         h2=l[i]
+#     elif l[i]>h3:
+#         h3=l[i]
+# print(h3)
+
 
 
 #18
-# Write a program to sort a list without using any built-in sorting functions.
-l=[7,6,5,4,3,2,1]
-j=
-for num in l:
-    if num>j:
-        j=num
-    print(j)
+# # Write a program to sort a list without using any built-in sorting functions.
+# l=[7,6,5,4,3,2,1]
+# j=
+# for num in l:
+#     if num>j:
+#         j=num
+#     print(j)
+
+           #or
+# l = list(map(int, input().split()))
+# for i in range(len(l)):
+#     for j in range(i+1,len(l)):
+#         if l[i]>l[j]:
+#             l[i],l[j]=l[j],l[i]
+# print(l)
 
 
 
+
+#19
+# to find nth largest number in list without in bulit
+# l = list(map(int, input().split()))
+# n=int(input())
+# for i in range(len(l)):
+#     for j in range(i+1,len(l)):
+#         if l[i]>l[j]:
+#             l[i],l[j]=l[j],l[i]
+# print(l[len(l)-n])
+
+
+
+#to find first four smallest missing values in list
+l = list(map(int, input().split()))
+s=min(l)+1
+c=0
+while(c<4):
+    if s not in l:
+        print(s)
+        c+=1
+    s=s+1

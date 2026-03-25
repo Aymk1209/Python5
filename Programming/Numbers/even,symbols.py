@@ -615,8 +615,74 @@ a=int(input())
 #         print("Not a Leap Year.")
 
 
+#Description:
+# Write a Program to Print the Right Angle Triangle Program with Prime Numbers and Fibonacci Numbers Alternatively.
 #
+#
+# Constraints:
+# Input :             First Line of the Input Consists of One Integer Value
+#
+# Output :          Print the Pattern as Shown.
+#
+# Constraints :   Given Number Must be Greater Than Zero or else Print "Invalid Input".
+#
+#
+# Example:
+# Input1 :              5
+#
+# Output1 :
+#
+# 2
+#
+# 0 3
+#
+# 1 5 1
+#
+# 7 2 11 3
+#
+# 13 5 17 8 19
+#
+#
+#
+#
+#
+# Input2 :              8
+#
+# Output2 :
+#
+# 2
+#
+# 0 3
+#
+# 1 5 1
+#
+# 7 2 11 3
+#
+# 13 5 17 8 19
+#
+# 13 23 21 29 34 31
+#
+# 55 37 89 41 144 43 233
+#
+# 47 377 53 610 59 987 61 1597
 
+day = int(input())
+month = int(input())
+year = int(input())
+
+# Zeller's Congruence formula for day of week (0=Saturday, 1=Sunday, ..., 6=Friday)
+if month < 3:
+    month += 12
+    year -= 1
+
+K = year % 100
+J = year // 100
+
+h = (day + (13*(month+1))//5 + K + K//4 + J//4 + 5*J) % 7
+
+days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+print(days[h])
 
 
 
