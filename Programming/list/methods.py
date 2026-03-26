@@ -258,11 +258,15 @@
 
 
 #to find first four smallest missing values in list
-l = list(map(int, input().split()))
-s=min(l)+1
-c=0
-while(c<4):
-    if s not in l:
-        print(s)
-        c+=1
-    s=s+1
+# l = list(map(int, input().split()))
+# s=min(l)+1
+# c=0
+# while(c<4):
+#     if s not in l:
+#         print(s)
+#         c+=1
+#     s=s+1
+
+
+
+
