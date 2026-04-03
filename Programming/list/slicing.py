@@ -1,0 +1,11 @@
+l=[10,20,30,40,50,60]
+print(l[1:3])
+print(l[0:4])
+print(l[1:5:1])
+print(l[5:3:1])
+print(l[5:3:-1])
+print(l[ : :1])
+print(l[ : :2])
+print(l[-4:4:1])
+print(l[1:-1:1])
+print(l[ : :-1])

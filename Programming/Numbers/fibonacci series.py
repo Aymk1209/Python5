@@ -206,3 +206,32 @@
 #         sum=sum+fact
 #         list.append(str(fact))
 #     print(f"+".join (list) + "=" + str(sum))
+
+
+
+
+#given number is fibbonci or not
+# Input number
+# n = int(input("Enter number to check: "))
+#
+# # Check if 0 or 1 (base Fibonacci cases)
+# if n == 0 or n == 1:
+#     print(f"{n} is Fibonacci")
+# else:
+#     # Calculate 5n² + 4 and 5n² - 4
+#     a = 5 * n * n + 4
+#     b = 5 * n * n - 4
+#
+#     # Check perfect square (sqrt integer check)
+#     sqrt_a = int(a ** 0.5)
+#     sqrt_b = int(b ** 0.5)
+#
+#     is_fib = (sqrt_a * sqrt_a == a) or (sqrt_b * sqrt_b == b)
+#
+#     if is_fib:
+#         print(f"{n} is Fibonacci")
+#     else:
+#         print(f"{n} is not Fibonacci")
+
+
+

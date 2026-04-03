@@ -91,15 +91,15 @@ from typing import reveal_type
 #Create a class MathOps with a static method is_even(num) that returns True if the number is even.
 # Then call it both from the class and an instance.
 #
-class mathops:
-    @staticmethod
-    def is_even(num):
-        if num%2==0:
-            return True
-        else:
-            return False
-obj=mathops
-print(obj.is_even(10))
+# class mathops:
+#     @staticmethod
+#     def is_even(num):
+#         if num%2==0:
+#             return True
+#         else:
+#             return False
+# obj=mathops
+# print(obj.is_even(10))
 
 
 
@@ -164,34 +164,34 @@ print(obj.is_even(10))
 # •	a static method is_valid_title(title) that checks if title has at least 3 characters
 # •	increment total_books for every book created
 
-# class Book:
-#     total_books = 0  # class variable
-#
-#     def __init__(self, title, author):
-#         if not Book.is_valid_title(title):
-#             raise ValueError("Title must have at least 3 characters.")
-#
-#         self.title = title
-#         self.author = author
-#         Book.total_books += 1  # increment for every book created
-#
-#     @classmethod
-#     def from_string(cls, book_str):
-#         title, author = book_str.split("-")
-#         return cls(title.strip(), author.strip())
-#
-#     @staticmethod
-#     def is_valid_title(title):
-#         return len(title) >= 3
-#
-#
-# # Example usage
-# b1 = Book("Python Basics", "John Doe")
-# b2 = Book.from_string("AI-Andrew Ng")
-#
-# print(b1.title, b1.author)
-# print(b2.title, b2.author)
-# print("Total Books:", Book.total_books)
+class Book:
+    total_books = 0  # class variable
+
+    def __init__(self, title, author):
+        if not Book.is_valid_title(title):
+            raise ValueError("Title must have at least 3 characters.")
+
+        self.title = title
+        self.author = author
+        Book.total_books += 1  # increment for every book created
+
+    @classmethod
+    def from_string(cls, book_str):
+        title, author = book_str.split("-")
+        return cls(title.strip(), author.strip())
+
+    @staticmethod
+    def is_valid_title(title):
+        return len(title) >= 3
+
+
+# Example usage
+b1 = Book("Python Basics", "John Doe")
+b2 = Book.from_string("AIAndrew Ng")
+
+print(b1.title, b1.author)
+print(b2.title, b2.author)
+print("Total Books:", Book.total_books)
 
 
 

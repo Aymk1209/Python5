@@ -273,32 +273,56 @@
 
 
 #prime+fibb alternating triangle
+# n=int(input())
+# if n<=0:
+#     print("Invalid ")
+# else:
+#     prime=2
+#     a=0
+#     b=1
+#     c=1
+#     for i in range(1,n+1):
+#         for j in range(1,i+1):
+#             if c%2==1:
+#                 while True:
+#                     is_prime=True
+#                     for k in range(2,prime):
+#                         if prime%k==0:
+#                             is_prime=False
+#                             break
+#                     if is_prime:
+#                         print(prime,end=" ")
+#                         prime+=1
+#                         break
+#                     prime+=1
+#             else:
+#                 print(a,end=" ")
+#                 c=a+b
+#                 a=b
+#                 b=c
+#             c+=1
+#         print()
+
+
+
+
 n=int(input())
 if n<=0:
-    print("Invalid ")
+    print("Invalid Input")
 else:
-    prime=2
-    a=0
-    b=1
-    c=1
-    for i in range(1,n+1):
+    for i in range(n,0,-1):
+        print(" "*(n-i),end="")
+        for j in range(i,0,-1):
+            print("*",end=" ")
+        print("  "*(n-i),end="")
+        for j in range(i,0,-1):
+            print("*",end=" ")
+        print()
+    for i in range(2,n+1):
+        print(" "*(n-i),end="")
         for j in range(1,i+1):
-            if c%2==1:
-                while True:
-                    is_prime=True
-                    for k in range(2,prime):
-                        if prime%k==0:
-                            is_prime=False
-                            break
-                    if is_prime:
-                        print(prime,end=" ")
-                        prime+=1
-                        break
-                    prime+=1
-            else:
-                print(a,end=" ")
-                c=a+b
-                a=b
-                b=c
-            c+=1
+            print("*",end=" ")
+        print("  "*(n-i),end="")
+        for j in range(1,i+1):
+            print("*",end=" ")
         print()

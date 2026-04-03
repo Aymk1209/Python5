@@ -36,13 +36,13 @@
 
 
 #whether to say the given list is in soreted order or not
-l = list(map(int, input().split()))
-b=True
-for i in range(len(l)-1):
-    if l[i]>l[i+1]:
-        b=False
-        break
-if b:
-    print("sorted")
-else:
-    print("not sorted")
+# l = list(map(int, input().split()))
+# b=True
+# for i in range(len(l)-1):
+#     if l[i]>l[i+1]:
+#         b=False
+#         break
+# if b:
+#     print("sorted")
+# else:
+#     print("not sorted")j

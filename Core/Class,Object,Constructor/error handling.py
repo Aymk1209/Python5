@@ -20,6 +20,7 @@
 #     print(f"Caught error: {e}")
 
 
+
 #2
 #• Write a function named find_length(obj) that uses a loop to calculate the
 # length of the given object without using the built-in len() function. The
@@ -28,6 +29,18 @@
 # handle a TypeError, and print an appropriate error message explaining what
 # happens when an integer is sent as input.
 
+# def find_length(obj):
+#     if isinstance(obj,list,tuple,set,str):
+#         c=0
+#         for i in obj:
+#             c+=1
+#         return c
+#     elif isinstance(obj,dict):
+#         c=0
+#         for k,v in obj.items():
+#             c+=1
+#         return c
+#     raise TypeError("obj must be a list or dict")
 
 
 
@@ -171,8 +184,8 @@
 # withdraw(amount) that raises an exception if the withdrawal amount is greater
 # than the available balance.
 
-# class InsufficientFundsError(Exception):
-#     """Custom exception raised when withdrawal exceeds available balance."""
+# class InsufficientFundsError(Exception):6q
+#
 #
 #     def __init__(self, balance, amount):
 #         self.message = f"InsufficientFundsError: Cannot withdraw ${amount:.2f}. Available balance: ${balance:.2f}"
@@ -242,6 +255,90 @@
 #6
 #  Create a class PasswordValidator with a method validate(password). Raise an
 # exception if the password length is less than 8 characters.
+#
+# class PasswordValidator:
+#     def validate(self, password):
+#         if len(password) < 8:
+#             raise ValueError("Password must be at least 8 characters long")
+# validator = PasswordValidator()
+# try:
+#     validator.validate("abc123")
+# except ValueError as e:
+#     print(e)
+# try:
+#      validator.validate("securepass123")
+# except ValueError as e:
+#     print(e)
+
+
+
+
+
+
+
+#7
+#  Create a class UserInput with a method get_integer(value). Handle ValueError
+# and TypeError using separate except blocks.
+
+# class UserInput:
+#     def get_integer(self, value):
+#         try:
+#             return int(value)
+#         except ValueError:
+#             print("ValueError: Input cannot be converted to integer")
+#         except TypeError:
+#             print("TypeError: Input is of invalid type")
+# ui = UserInput()
+# print(ui.get_integer("123"))
+# print(ui.get_integer("abc"))
+# print(ui.get_integer([1, 2]))
+
+
+
+
+#8
+#  Create a base class Shape with a method area() that raises
+# NotImplementedError. Create a child class Rectangle that overrides and
+# implements the area method.
+
+# class Shape:
+#     def area(self):
+#         raise NotImplementedError()
+# class Rectangle(Shape):
+#     def area(self):
+#         print("rectangle area")
+# c=Rectangle
+# c.area(Rectangle)
+
+
+
+
+
+#9
+#  Create a class Service with a method that calls another method which raises an
+# exception. Catch and handle the exception in the Service class.
+# class Service:
+#     def risky_operation(self):
+#
+#         raise RuntimeError("Operation failed due to invalid state!")
+#
+#     def process_request(self):
+#         try:
+#             self.risky_operation()
+#         except RuntimeError as e:
+#             print(f"Service recovered from error: {e}")
+#             return "Operation completed safely"
+#         return "Success"
+# service = Service()
+# result = service.process_request()
+# print(result)
+
+
+
+#10
+# Create a class Transaction with a method process() that uses try, except, and
+# finally blocks to ensure a cleanup message is always printed.
+
 
 
 

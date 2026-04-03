@@ -294,5 +294,25 @@
 #     print(ap,bp)
 
 
+#finding nth prime
+# Get nth prime - simple version
+# n = int(input("Enter n: "))
+# count = 0
+# num = 2
+# while count < n:
+#     is_prime = True
+#     d = 2
+#     while d * d <= num:
+#         if num % d == 0:
+#             is_prime = False
+#             break
+#         d = d + 1
+#     if is_prime:
+#         count = count + 1
+#     num = num + 1
+# print(f"{n}th prime =", num - 1)
+
+
+
 
 
