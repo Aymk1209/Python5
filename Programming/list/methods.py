@@ -2,13 +2,13 @@
 # l=list(map(int,input().split()))
 # print(l)
 #if user first gives number of elements present in the list and gives values
-# l=[]
-# n=int(input("size of list:"))
-# for i in range(n):
-#     print("enter the numbers in one line by line")
-#     k=int(input())
-#     l.append(k)
-# print(l)
+l=[]
+n=int(input("size of list:"))
+for i in range(n):
+    print("enter the numbers in one line by line")
+    k=int(input())
+    l.append(k)
+print(l)
 
 
 

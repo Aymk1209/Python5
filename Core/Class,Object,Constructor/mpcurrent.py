@@ -116,9 +116,68 @@
 # demonstrate_behavior(dog)
 # demonstrate_behavior(bird)
 
+#6
+# 6. Create a class in a module that uses private attributes and @property /
+# @setter decorators. Import the class into another module and show how
+# encapsulation protects the data while still allowing controlled access.
+
+
+# from mptest import Product
+#
+# print("=== Testing Product Class Encapsulation ===")
+#
+#
+# print("\\n1. Valid initial price:")
+# p1 = Product(500)
+# print(p1)
+# print(f"Direct price access: ${p1.price}")
+# print()
+#
+#
+# print("2. Invalid initial price:")
+# p2 = Product(-100)
+# print(p2)
+# print(f"Protected default price: ${p2.price}")
+# print()
+#
+#
+# print("3. Valid price update via setter:")
+# p1.price = 750
+# print(f"Updated price: ${p1.price}")
+# print()
+#
+#
+# print("4. Invalid price update (protected):")
+# p1.price = -50
+# print(f"Price unchanged: ${p1.price}")
+# print()
+#
+# print("5. Direct private access (discouraged):")
+# try:
+#     print(p1.__price)
+# except AttributeError as e:
+#     print(f"Protected! {e}")
+#
+#
+# print("\\n6. Protected convention access:")
+# print(f"_Product__price: ${p1._Product__price}")
 
 
 
+# 7. Create a module containing two classes where one uses composition and another
+# uses inheritance to reuse code from a base class. Import and demonstrate the
+# difference between the two approaches.
+# demo.py
+from mptest import InheritedProcessor, ComposedProcessor
 
+# Test inheritance
+inherited = InheritedProcessor()
+print("Inherited:", inherited.process_data("hello"))  # Processed: HELLO
 
+# Test composition
+composed = ComposedProcessor()
+print("Composed:", composed.process_data("hello"))    # Processed: HELLO
 
+# Key runtime difference: identity check
+print("Same type via inheritance?", isinstance(inherited, BaseProcessor))  # True
+print("Same type via composition?", isinstance(composed, BaseProcessor))   # False
