@@ -1,0 +1,11 @@
+s="PYTHon"
+j=s.lower()
+print(j)
+k=s.upper()
+print(k)
+result = s.capitalize()
+print(result)
+t=s.title()
+print(t)
+sc=s.swapcase()
+print(sc)

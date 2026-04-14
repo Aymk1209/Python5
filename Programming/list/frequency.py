@@ -1,8 +1,8 @@
 #the each element in list should print and how many times it is present in list
-# l=[10,20,10,20,20,17,5,17,6]
-# for i in range(len(l)):
-#     c=l.count(l[i])
-#     print(f"{l[i]}->{c}")
+l=[10,20,10,20,20,17,5,17,6]
+for i in range(len(l)):
+    c=l.count(l[i])
+    print(f"{l[i]}->{c}")
 
                 #or
 
@@ -98,7 +98,7 @@
 #             print(f"{l[i]}->{c1}")
 
 
-#given a list and gives a value which indicates that
+# given a list and gives a value which indicates that
 # many times repeted elements should be print
 # l=[10,20,10,20,20,17,5,17,6,4]
 # k=int(input())

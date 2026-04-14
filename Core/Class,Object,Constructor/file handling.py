@@ -19,9 +19,7 @@
 #         print(c)
 # with Yogi("fg.py","r")as yo:
 #     print(yo.read())
-
-
-
+from contextlib import contextmanager
 
 #2
 #  Write a program that opens a file using a context manager, reads all lines
@@ -75,6 +73,46 @@
 
 
 #5
+# • Create a custom context manager using a class that opens a file in write mode
+# in the __enter__ method, writes a line to the file, closes the file in the
+# __exit__ method, and properly prints or logs any exception information received
+# in __exit__.
+
+# import traceback
+#
+# class SafeFileWriter:
+#     def __init__(self, filename, line="Hello from custom context manager!\n"):
+#         self.filename = filename
+#         self.line = line
+#         self.file = None
+#
+#     def __enter__(self):
+#         print(f"Opening file: {self.filename}")
+#         self.file = open(self.filename, "w", encoding="utf-8")
+#         return self
+#
+#     def __exit__(self, exc_type, exc_value, exc_tb):
+#         if self.file:
+#             print("Closing file.")
+#             self.file.close()
+#
+#         if exc_type is not None:
+#             print(f"An exception occurred: {exc_type.__name__}: {exc_value}")
+#             print("Traceback (last few lines):")
+#             traceback.print_tb(exc_tb, limit=5)
+#         else:
+#             print("File written successfully, no exceptions.")
+#         return False
+#
+#
+# # Usage example
+# if __name__ == "__main__":
+#     try:
+#         with SafeFileWriter("test.txt") as writer:
+#             writer.file.write(writer.line)
+#             # 1 / 0
+#     except Exception as e:
+#         print("Outer handler caught:", e)
 
 
 
@@ -82,4 +120,28 @@
 
 
 
+#6
+#  Create a custom context manager using @contextmanager from the contextlib
+# module that opens a file, yields the file object, and ensures the file is closed
+# even if an exception occurs.
 
+
+# from contextlib import contextmanager
+#
+# @contextmanager
+# def open_file(fn, mode):
+#     print("opening file")
+#     f = open(fn, mode)
+#     try:
+#         yield f
+#     finally:
+#         f.close()
+#         print("closing file")
+#
+# with open_file("test.txt", "w+") as f:
+#     f.write("hello world")
+#     f.seek(0)
+#     print(f.read())
+#
+# with open_file("test.txt", "w+") as f:
+#     print(f)
