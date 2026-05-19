@@ -129,3 +129,17 @@
 #             print(i)
 #             break
 
+#lcm
+# n1=int(input())
+# n2=int(input())
+# h=max(n1,n2)
+# k=h
+# while(True):
+#     if h%n1==0 and  h%n2==0:
+#         print(h)
+#         break
+#     h=h+k
+
+
+#hcf
+

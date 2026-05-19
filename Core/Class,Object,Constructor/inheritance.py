@@ -1,21 +1,21 @@
-# class A:
-#     z=30
-#     def __init__(self, x):
-#         self.x = x
-#     @classmethod
-#     def m2(cls):
-#         print("this is a class method")
-#     def m1(self):
-#         print("this is a Instance method")
-# class B(A):
-#     def __init__(self, x,y):
-#         super().__init__(x)
-#         self.y=y
-#     @classmethod
-#     def m1(cls):
-#         super().m2()
-# obj=B(10,20)
-# B.m1()
+class A:
+    z=30
+    def __init__(self, x):
+        self.x = x
+    @classmethod
+    def m2(cls):
+        print("this is a class method")
+    def m1(self):
+        print("this is a Instance method")
+class B(A):
+    def __init__(self, x,y):
+        super().__init__(x)
+        self.y=y
+    @classmethod
+    def m1(cls):
+        super().m2()
+obj=B(10,20)
+B.m1()
 #
 #
 #
@@ -224,19 +224,19 @@
 
 #Create class University with a class variable and a class method. Inherit it
 # into class College and access the parent’s class variable from the child class.
-class University:
-    uni_name="cmr"
-    @classmethod
-    def m1(cls):
-        print("sdcv",cls.uni_name)
-class Collage(University):
-    def m2(self):
-        print("sdc",Collage.uni_name)
-University.m1()
-Collage.m1()
-
-c1=Collage()
-c1.m1()
+# class University:
+#     uni_name="cmr"
+#     @classmethod
+#     def m1(cls):
+#         print("sdcv",cls.uni_name)
+# class Collage(University):
+#     def m2(self):
+#         print("sdc",Collage.uni_name)
+# University.m1()
+# Collage.m1()
+#
+# c1=Collage()
+# c1.m1()
 
 
 

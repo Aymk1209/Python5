@@ -316,3 +316,163 @@
 
 
 
+# n=int(input())
+# b=True
+# if n<1:
+#     print("invalid input")
+# else:
+#     for i in range(2,n):
+#         if n%i==0:
+#             b=False
+#             break
+#     if b:
+#         print("prime")
+#     else:
+#         print("not prime")
+
+
+# n=int(input())
+# fc=0
+# for i in range(1,n+1):
+#     if n%i==0:
+#         fc=fc+1
+# if fc==2:
+#     print("prime")
+# else:
+#     print("not prime")
+
+
+
+# num = int(input())            # start checking from 2
+# for i in range(2,int(num**0.5)+1):
+#     if num%i==0:
+#         print("not prime")
+#         break
+# else:
+#     print("prime")
+#     num+=1
+# l1=l[::2]
+# print(", ".join(map(str,l1)),end=".")
+
+#prime in the range
+# n=25
+# m=100
+# l=[]
+# for i in range(n,m+1):
+#     for j in range(2,int(i**0.5)+1):
+#         if i%j==0:
+#             break
+#     else:
+#         l.append(i)
+# print(*l)
+
+
+#nearest prime
+# def prime(n):
+#     for i in range(2,int(n**0.5)+1):
+#         if n%i==0:
+#             break
+#     else:
+#         return True
+# k=int(input())
+# ap=k+1
+# bp=k-1
+# while True:
+#     if prime(ap):
+#         break
+#     ap+=1
+# while True:
+#     if prime(bp):
+#         break
+#     bp-=1
+# if ap-k>k-bp:
+#     print(bp)
+# elif ap-k<k-bp:
+#     print(ap)
+# else:
+#     print(bp,ap)
+
+
+
+
+# def prime(n):
+#     for i in range(2,int(n**0.5)+1):
+#         if n%i==0:
+#             break
+#     else:
+#         return True
+# k=int(input())
+# ap=k+1
+# bp=k-1
+# while True:
+#     if prime(ap):
+#         break
+#     ap=ap+1
+# while True:
+#     if prime(bp):
+#         break
+#     bp=bp-1
+# if ap-k>k-bp:
+#     print(bp)
+# elif ap-k<k-bp:
+#     print(ap)
+# else:
+#     print(bp,ap)
+
+n=int(input())
+for i in range(2,int(n**0.5)+1):
+    if n%i==0:
+        print("not prime")
+        break
+
+    else:
+        print("prime")
+
+
+
+
+
+
+
+
+
+
+
+
+
+#prime factors
+        # count of primes printed so far
+# num = 20           # start checking from 2
+# l=[]
+# for i in range(1,num):
+#     if num%i==0:
+#         if i==1:
+#             continue
+#         for j in range(2,int(i**0.5)+1):
+#             if i%j==0:
+#                 break
+#         else:
+#             l.append(i)
+# print(*l)
+
+
+# n1=int(input())
+# n2=int(input())
+# res=[]
+# for i in range(n1,n2+1):
+#     fc=0
+#     for j in range(1,i+1):
+#         if i%j==0:
+#             fc=fc+1
+#     if fc==2:
+#         res.append(i)
+#         a=sum(res)
+#         avg=a/len(res)
+#         j=res[::2]
+#         mk=",".join(map(str,j))
+# print(",".join(map(str,res)))
+# print(f"sum of primes in b/w values {a}")
+# print(f"avg of prime num b/w values {avg:.2f}")
+# print(f"alternative primes b/w values {mk}")
+
+

@@ -2,8 +2,8 @@
 # Write a program to print all rotations of a list (anticlockwise)
 # l=[10,20,30,40]
 # for i in range(len(l)):
-#     print(*l)
-#     l=l[1: ]+[l[0]]
+#         print(*l)
+#         l=l[1: ]+[l[0]]
       #0r
 # l=[10,20,30,40]
 # for i in range(len(l)):
@@ -13,13 +13,14 @@
 #         l[j-1] =l[j]
 #     l[len(l)-1]=t
 
-
+print("-----")
 #clockwise
 #Write a program to print all rotations of a list (clockwise)
 # l=[10,20,30,40]
 # for i in range(len(l)):
-#     print(*l)
-#     l=[l[len(l)-1]]+l[0:len(l)-1]
+#     if k % len(l) == 1:
+#         print(*l)
+#         l=[l[len(l)-1]]+l[0:len(l)-1]
         #or
 # l=[10,20,30,40]
 # for i in range(len(l)):
@@ -53,3 +54,15 @@
 #         for j in range(1,len(l)):
 #             l[j-1] =l[j]
 #         l[len(l)-1]=t
+
+# #10 20 30 40
+# l=[10,20,30,40]
+# for i in range(len(l)):
+#     print(*l)
+#     l=l[1: ]+[l[0]]
+
+
+l=[10,20,30,40]
+for i in range(len(l)):
+    print(*l)
+    l=[l[len(l)-1]]+l[0:len(l)-1]

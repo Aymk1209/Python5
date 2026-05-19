@@ -165,15 +165,134 @@
 
 
 
+#
+# #2
+# class Member:
+#     def __init__(self,username,credentials,perms):
+#         self.username=username
+#         self._credentials=credentials
+#         self.__perms=[]
+# class UserBase():
+#     def get_role(self):
+
+
+
+
+
+
+
+
 
 #2
-class Member:
-    def __init__(self,username,credentials,perms):
-        self.username=username
-        self._credentials=credentials
-        self.__perms=[]
-class UserBase():
-    def get_role(self):
+#create class Service with a method that calls another method which
+#raise an exception catch and handel the exception in the service class
+# class NegativePriceError(Exception):
+#     pass
+#
+# class Service:
+#     def validate_price(self, price):
+#         if price < 0:
+#             raise NegativePriceError(f"Price cannot be negative.")
+#         return price
+#
+#     def get_final_cost(self, price):
+#         try:
+#             return self.validate_price(price)
+#         except NegativePriceError as e:
+#             return f"Caught an exception: {e}"
+#
+# s1 = Service()
+# print(s1.get_final_cost(100))
+# print(s1.get_final_cost(-100))
+
+
+#3
+#abstract base class: Sensor with functions read_value()
+#and calibrate()
+#subclass:Temperaturesensor, pressuresensor, humiditysensor
+#encapsulate:internal raw sensor readings print something
+# which indicates type of sensor
+#calibration factor log something which indicateds "calibration done successfully"
+#hide all raw operations and allow only a public, clean get_reading() method
+from abc import ABC, abstractmethod
+
+class Sensor(ABC):
+    @abstractmethod
+    def _read_value(self):
+        pass
+
+    @abstractmethod
+    def _calibrate(self):
+        pass
+
+    def get_reading(self):
+        self._calibrate()
+        return self._read_value()
+
+class TemperatureSensor(Sensor):
+    def _read_value(self):
+        print("Reading from Temperature Sensor")
+        return 38
+
+    def _calibrate(self):
+        print("Temperature sensor: calibration done successfully")
+
+class PressureSensor(Sensor):
+    def _read_value(self):
+        print("Reading from Pressure Sensor")
+        return 100
+
+    def _calibrate(self):
+        print("Pressure sensor: calibration done successfully")
+
+class HumiditySensor(Sensor):
+    def _read_value(self):
+        print("Reading from Humidity Sensor")
+        return 60
+
+    def _calibrate(self):
+        print("Humidity sensor: calibration done successfully.")
+
+
+tem=[TemperatureSensor(), PressureSensor(), HumiditySensor()]
+for s in tem:
+    print(f"Output:{s.get_reading()}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

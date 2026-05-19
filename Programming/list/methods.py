@@ -2,13 +2,13 @@
 # l=list(map(int,input().split()))
 # print(l)
 #if user first gives number of elements present in the list and gives values
-l=[]
-n=int(input("size of list:"))
-for i in range(n):
-    print("enter the numbers in one line by line")
-    k=int(input())
-    l.append(k)
-print(l)
+# l=[]
+# n=int(input("size of list:"))
+# for i in range(n):
+#     print("enter the numbers in one line by line")
+#     k=int(input())
+#     l.append(k)
+# print(l)
 
 
 
@@ -228,11 +228,11 @@ print(l)
 #18
 # # Write a program to sort a list without using any built-in sorting functions.
 # l=[7,6,5,4,3,2,1]
-# j=
+# j=0
 # for num in l:
 #     if num>j:
 #         j=num
-#     print(j)
+# print(j)
 
            #or
 # l = list(map(int, input().split()))

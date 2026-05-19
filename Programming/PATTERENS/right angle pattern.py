@@ -252,77 +252,222 @@
 #     print()
 
 
-#mixed pattern of prime in fibb
-# n=int(input())
-# a=0
-# b=1
-# num=2
-# for i in range(1,n+2):
-#     for j in range(1,i+1):
-#         if j%2==1:
-#             print(a,end=" ")
-#             c=a+b
-#             a=b
-#             b=c
-#         else:
-#             print(num,end=" ")
-#             num+=1
-#     print()
-
-
-
-
-#prime+fibb alternating triangle
 # n=int(input())
 # if n<=0:
-#     print("Invalid ")
+#     print("Invalid Input")
 # else:
-#     prime=2
-#     a=0
-#     b=1
-#     c=1
-#     for i in range(1,n+1):
+#     for i in range(n,0,-1):
+#         print(" "*(n-i),end="")
+#         for j in range(i,0,-1):
+#             print("*",end=" ")
+#         print("  "*(n-i),end="")
+#         for j in range(i,0,-1):
+#             print("*",end=" ")
+#         print()
+#     for i in range(2,n+1):
+#         print(" "*(n-i),end="")
 #         for j in range(1,i+1):
-#             if c%2==1:
-#                 while True:
-#                     is_prime=True
-#                     for k in range(2,prime):
-#                         if prime%k==0:
-#                             is_prime=False
-#                             break
-#                     if is_prime:
-#                         print(prime,end=" ")
-#                         prime+=1
-#                         break
-#                     prime+=1
-#             else:
-#                 print(a,end=" ")
-#                 c=a+b
-#                 a=b
-#                 b=c
-#             c+=1
+#             print("*",end=" ")
+#         print("  "*(n-i),end="")
+#         for j in range(1,i+1):
+#             print("*",end=" ")
 #         print()
 
 
 
 
+# 1
+# 2 6
+# 3 7 10
+# 4 8 11 13
+# 5 9 12 14 15
+# n=int(input())
+# for i in range(1,n+1):
+#     c=i
+#     for j in range(1,i+1):
+#         print(c,end=" ")
+#         c=c+(n-j)
+#     print()
+
+
+
+
+
+# def Prime(a):
+#     num=a+1
+#     while True:
+#         p=True
+#         for i in range (2,num):
+#             if num%i==0:
+#                 p=False
+#                 break
+#         if p:
+#             return num
+#         num+=1
+# def fib():
+#     a=0
+#     b=1
+#     while True:
+#         yield a
+#         c=a+b
+#         a=b
+#         b=c
+# n = int(input())
+# c = 2
+# dc = 1
+# gen = fib()
+# for i in range (1,n+1):
+#     for j in range (1,i+1):
+#         if dc%2==1:
+#             print(c, end=" ")
+#             c = Prime(c)
+#         else:
+#             print(next(gen), end=" ")
+#         dc += 1
+#     print()
+
+
+# def prime(a):
+#     num=a+1
+#     while True:
+#         if num<2:
+#             num+=1
+#             continue
+#         is_prime= True
+#         for i in range(2,int(num**0.5)+1):
+#             if num%i==0:
+#                 is_prime=False
+#                 break
+#         if is_prime:
+#             return num
+#         num+=1
+# def fib():
+#     a=0
+#     b=1
+#     while True:
+#         yield a
+#         c=a+b
+#         a=b
+#         b=c
+# n=int(input())
+# c=2
+# dc=1
+# gen=fib()
+# for i in range(1,n+1):
+#     for j in range(1,i+1):
+#         if dc%2==1:
+#             print(c,end=" ")
+#             c=prime(c)
+#         else:
+#             print(next(gen),end=" ")
+#         dc+=1
+#     print()
+
+
+def prime(a):
+    num=a+1
+    while True:
+        if num<2:
+            num+=1
+            continue
+        is_prime=True
+        for i in range(2,int(num**0.5)+1):
+            if num%i==0:
+                is_prime=False
+        if is_prime:
+            return num
+        num+=1
+def fib():
+    a=0
+    b=1
+    while True:
+        yield a
+        c=a+b
+        a=b
+        b=c
 n=int(input())
-if n<=0:
-    print("Invalid Input")
-else:
-    for i in range(n,0,-1):
-        print(" "*(n-i),end="")
-        for j in range(i,0,-1):
-            print("*",end=" ")
-        print("  "*(n-i),end="")
-        for j in range(i,0,-1):
-            print("*",end=" ")
-        print()
-    for i in range(2,n+1):
-        print(" "*(n-i),end="")
-        for j in range(1,i+1):
-            print("*",end=" ")
-        print("  "*(n-i),end="")
-        for j in range(1,i+1):
-            print("*",end=" ")
-        print()
+c=2
+dc=1
+gen=fib()
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        if dc%2==1:
+            print(c,end=" ")
+            c=prime(c)
+        else:
+            print(next(gen),end=" ")
+        dc+=1
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# n=int(input())
+# if n==0:
+#     print("Invalid Input")
+# else:
+#     n=abs(n)
+#     primes=[]
+#     num=2
+#     while len(primes)<n:
+#         for i in range(2,int(num**0.5)+1):
+#             if num %i==0:
+#                 break
+#         else:
+#             primes.append(num)
+#         num+=1
+
+
+# n=int(input())
+# for i in range(n):
+#     for j in range(i):
+#         print(" ",end="")
+#     for j in range (n-i):
+#         print("*",end="")
+#     print()
+
+
+# n=int(input())
+# for j in range(1,n+1):
+#     print(j,end=" ")
+# print()
+# for i in range(n-1,0,-1):
+#     if (n-i)%2==1:
+#         for j in range(i,0,-1):
+#             print(j,end=" ")
+#         print()
+#     else:
+#         for j in range(1,i+1):
+#             print(j,end=" ")
+#         print()
+
+
+# n=int(input())
+# for i in range(1,n+1):
+#     c=i
+#     for j in range(1,i+1):
+#         print(c,end=" ")
+#         c=c+(n-j)
+#     print()
+
+n=int(input())

@@ -234,4 +234,76 @@
 #         print(f"{n} is not Fibonacci")
 
 
+#range of fiibic avg and alternative
+# n1=int(input())
+# n2=int(input())
+# a=0
+# b=1
+# d=0
+# s=0
+# sum=0
+# if n1<0 or n2<0:
+#     print("invalid inputs")
+# else:
+#     if n1>n2:
+#         n1,n2=n2,n1
+#     while(a<=n2):
+#         if a>=n1:
+#             s=s+1
+#             if s%2==1:
+#                 d+=1
+#                 sum=sum+a
+#         c=a+b
+#         a=b
+#         b=c
+#     if d!=0:
+#         avg=sum/d
+#         print(f"{avg:.2f}")
+#     if d==0:
+#         print("no fibonacci")
 
+
+
+#first n terms in fiboobacci
+# n=int(input())
+# a=0
+# b=1
+# if n<0:
+#     n=abs(n)
+# for i in range(1,n+1):
+#     print(a,end=" ")
+#     c=a+b
+#     a=b
+#     b=c
+
+#first n alternative terms in fiboobacci
+# n=int(input())
+# a=0
+# b=1
+# re=[]
+# if n<0:
+#     n=abs(n)
+# for i in range(1,n*2):
+#     if i%2==1:
+#         re.append(str(a))
+#     c=a+b
+#     a=b
+#     b=c
+# print(",".join(re))
+
+
+
+#Write a program to find sum of Factorials upto
+#N Numbers like 0! + 1! + 2! + 3! + 4! + 5! +....upto n!?
+# n=int(input())
+# fact=1
+# sum=0
+# l=[]
+# for i in range(n+1):
+#     if i==0 or i==1:
+#         fact=1
+#     else:
+#         fact=fact*i
+#     sum=sum+fact
+#     l.append(str(fact))
+# print(f"+".join(l)+"="+str(sum))

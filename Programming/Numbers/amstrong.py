@@ -207,3 +207,116 @@
 #     else:
 #         print(".")
 
+
+# n=int(input())
+# t=n
+# dc=0
+# sum=0
+# if n<=0:
+#     print("invd")
+# else:
+#     while t>0:
+#         dc=dc+1
+#         t=t//10
+#     t=n
+#     while t>0:
+#         r=t%10
+#         sum=sum+(r**dc)
+#         t=t//10
+#     if sum==n:
+#         print("ams")
+#     else:
+#         print("nams")
+
+
+# n=int(input())
+# dc=0
+# while n>0:
+#     dc=dc+1
+#     n=n//10
+# print(dc)
+
+
+#a=int(input())
+# b=int(input())
+# res=[]
+# for i in range(a,b):
+#     t=i
+#     dc=0
+#     sums=0
+#     while t>0:
+#         dc=dc+1
+#         t=t//10
+#     t=i
+#     while t>0:
+#         r=t%10
+#         sums=sums+(r**dc)
+#         t=t//10
+#     if sums==i:
+#         res.append(sums)
+# if len(res)!=0:
+#     ab=sum(res)
+#     m=",".join(map(str, res))
+#     print(f"amg no b/w given no is {m}.")
+#     print(f"sum of amg nums {ab}")
+# else:
+#     print("no amg no")
+
+
+
+
+
+#
+# a=int(input())
+# b=int(input())
+# res=[]
+# for i in range(a,b):
+#     t=i
+#     dc=0
+#     sums=0
+#     while t>0:
+#         dc+=1
+#         t=t//10
+#
+#     t=i
+#     while t>0:
+#         r=t%10
+#         sums=sums+(r**dc)
+#         t=t//10
+#     if sums==i:
+#         res.append(sums)
+# if len(res)!=0:
+#     cmk=",".join(map(str,res))
+# print(cmk)
+
+
+
+
+
+
+#alter amg no
+# a=int(input())
+# b=int(input())
+# res=[]
+# for i in range(a+1,b):
+#     dc=len(str(i))
+#     t=i
+#     sums=0
+#     while t>0:
+#         r=t%10
+#         sums=sums+(r**dc)
+#         t=t//10
+#     if sums==i:
+#         res.append(i)
+# l=res[::2]
+# if len(l)>0:
+#     ab=sum(l)
+#     m=",".join(map(str,l))
+#     print(f"sum of alt amg num b/w nums is {ab}.")
+
+
+
+
+
+
+

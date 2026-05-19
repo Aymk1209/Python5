@@ -1,11 +1,11 @@
 #the each element in list should print and how many times it is present in list
-l=[10,20,10,20,20,17,5,17,6]
-for i in range(len(l)):
-    c=l.count(l[i])
-    print(f"{l[i]}->{c}")
+# l=[10,20,10,20,20,17,5,17,6]
+# for i in range(len(l)):
+#     c=l.count(l[i])
+#     print(f"{l[i]}->{c}")
 
                 #or
-
+#
 # l=[10,20,10,20,20,17,5,17,6]
 # for i in range(len(l)):
 #     c=0

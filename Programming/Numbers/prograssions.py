@@ -165,5 +165,25 @@
 
 
 
-
+n=int(input())
+if n<=0:
+    print("Invalid Input")
+else:
+    a=0
+    b=1
+    r=[]
+    for i in range(n):
+        r.append(a)
+        c=a+b
+        a=b
+        b=c
+    if len(r)==0:
+        print("No Fibonacci Values")
+    else:
+        res=[]
+        for i in range(0,n+1):
+            res.append(i)
+        for j in range(len(res)):
+            if res[j] not in r:
+                print(j,end=" ")
 

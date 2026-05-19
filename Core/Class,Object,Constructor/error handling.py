@@ -1,7 +1,6 @@
 #1
 #• Create a class Person whose constructor takes age as an argument. Raise a ValueError if the age is less than 0.
 # class Person:
-#
 #     def __init__(self, age):
 #         if age < 0:
 #             raise ValueError("Age cannot be less than 0")
@@ -45,29 +44,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #3
 # Create a class Student with an attribute marks. Implement a method
 # set_marks(marks) that raises a ValueError if marks are not in the range 0 to 100.
@@ -83,13 +59,23 @@
 #         if marks < 0 or marks > 100:
 #             raise ValueError(f"Marks must be between 0 and 100. Got {marks}.")
 #         self._marks = marks
-#
+# #
 #     @property
 #     def marks(self):
 #         return self._marks
+# #
+# try:
+#     student2=Student(50)
+#     print(f"studrnt2 marks:{student2.marks}")
+#     student2.set_marks(160)
+#     print(f"student2 marks{student2.marks} ")
+# except ValueError as e:
+#     print(f"error:{e}")
 #
 #
 #
+#
+# #
 # print("=== Valid marks ===")
 # try:
 #     student1 = Student(85)
@@ -184,7 +170,7 @@
 # withdraw(amount) that raises an exception if the withdrawal amount is greater
 # than the available balance.
 
-# class InsufficientFundsError(Exception):6q
+# class InsufficientFundsError(Exception):
 #
 #
 #     def __init__(self, balance, amount):
@@ -194,25 +180,17 @@
 #
 # class BankAccount:
 #     def __init__(self, initial_balance=0.0):
-#         """
-#         Initialize BankAccount with initial balance.
-#         """
 #         if initial_balance < 0:
 #             raise ValueError("Initial balance cannot be negative.")
 #         self.balance = initial_balance
 #
 #     def deposit(self, amount):
-#         """Deposit money into account."""
 #         if amount <= 0:
 #             raise ValueError("Deposit amount must be positive.")
 #         self.balance += amount
 #         print(f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}")
 #
 #     def withdraw(self, amount):
-#         """
-#         Withdraw money from account.
-#         Raises InsufficientFundsError if amount > balance.
-#         """
 #         if not isinstance(amount, (int, float)) or amount <= 0:
 #             raise ValueError("Withdrawal amount must be a positive number.")
 #
@@ -252,6 +230,7 @@
 
 
 
+
 #6
 #  Create a class PasswordValidator with a method validate(password). Raise an
 # exception if the password length is less than 8 characters.
@@ -269,9 +248,6 @@
 #      validator.validate("securepass123")
 # except ValueError as e:
 #     print(e)
-
-
-
 
 
 

@@ -116,7 +116,7 @@
 #
 # print(file.read("0000"))
 #
-# print(file.__log)
+# print(file.log)
 
 
 
@@ -140,7 +140,7 @@
 #
 #
 #     def update_salary(self, new_salary):
-#         if new_salary > self.__salary:
+#         if new_salary > self._d_salary:
 #             self.__salary = new_salary
 #             print("Salary updated")
 #         else:
@@ -159,6 +159,20 @@
 # emp.update_salary(20000)
 
 # print(emp.__salary)  # This will cause an error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -185,7 +199,13 @@
 #     def get_final_price(self):
 #         return self.__cal_final_price()
 # p1=Product(3000,65)
-# print("Final prize:",p1.get_final_price())
+# print("Final prize:",p1.get_final_price()
+
+
+
+
+
+
 
 
 
@@ -198,8 +218,8 @@
 # • health cannot drop below 0 or exceed max limit
 # • expose only current health through a read-only getter
 
-class Character:
-    def __init__(self,health):
-        self.__health=health
+# class Character:
+#     def __init__(self,health):
+#         self.__health=health
 
 

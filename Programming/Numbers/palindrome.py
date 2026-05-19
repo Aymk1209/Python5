@@ -277,6 +277,110 @@
 #     fact=fact*i
 # print(fact)
 
+
+# n=int(input())
+# rev=0
+# c=n
+# while(n>0):
+#     r=n%10
+#     rev=rev*10+r
+#     n=n//10
+# if rev==c:
+#     print("palindrome")
+
+
+# a=int(input())
+# b=int(input())
+# if a<0:
+#     a=-a
+# if b<0:
+#     b=-b
+# if a>b:
+#     a,b=b,a
+# c=0
+# sum=0
+# for i in range(a+1,b):
+#     t=i
+#     rev=0
+#     while t>0:
+#         r=t%10
+#         rev=rev*10+r
+#         t=t//10
+#     if rev==i:
+#         c=+1
+#         sum=sum+i
+# if c==0:
+#     print("no palindrome")
+# else:
+#     print(sum)
+
+
+
+
+# a=int(input())
+# b=int(input())
+# c=0
+# s=0
+# sum=0
+# for i in range(a+1,b):
+#     t=i
+#     rev=0
+#     while t>0:
+#         r=t%10
+#         rev=rev*10+r
+#         t=t//10
+#     if rev==i:
+#         c=+1
+#         s=s+1
+#         sum=sum+i
+# if c==0:
+#     print("no palindrome")
+# else:
+#     avg=sum/s
+#     print(f"{avg:.2f}")
+
+
+
+# a=int(input())
+# b=int(input())
 #
+# if a>=0 and b>=0:
+#     palin=[]
+#     c=0
+#     sum=0
+#     for i in range(a,b+1):
+#         t=i
+#         rev=0
+#         while t>0:
+#             r=t%10
+#             rev=rev*10+r
+#             t=t//10
+#         if rev==i:
+#             c=c+i
+#             if c%2!=0:
+#                 sum=sum+i
+#                 palin.append(i)
+#     if len(palin)==0:
+#         print("no palindrome")
+#     else:
+#         d="+".join(map(str,palin))
+#         print(f"dfghjfdfg of {a}and {b} is {d}={sum}")
+
+
+
+n= int(input())
+if n<0:
+    print("INV")
+else:
+    i=n
+    rev=0
+    while i>0:
+        r=i%10
+        rev=rev*10+r
+        i=i//10
+    if rev==n:
+        print("its palin")
+    else:
+        print(f"the revsere of number is {rev}")
 
 
