@@ -193,12 +193,6 @@
 #     event.set()
 #
 #
-#
-#
-#
-#
-#
-#
 # import asyncio
 # import time
 # #
@@ -223,3 +217,60 @@
 # p2=multiprocessing.Process(target=loop_print, name="p2",args=("Process-2",))
 # if __name__=="__main__":
 #     p1.start(); p2.start(); p1.join(); p2.join()
+
+
+
+# 1. Write a Python program that creates a worker thread which prints “Hello
+# from worker thread” while the main thread prints “Hello from main thread”, and
+# ensure that the main thread waits for the worker thread to finish execution
+# before the program exits.
+# import threading
+#
+# def worker():
+#     print("Hello from worker thread")
+#
+# t = threading.Thread(target=worker)
+# t.start()
+# print("Hello from main thread")
+# t.join()
+
+
+
+# 2. Write a Python program that creates three separate threads where each
+# thread prints numbers from 1 to 5, and every printed number must be prefixed
+# with the name of the thread that printed it, such as “Thread-1: 3”
+
+# import threading
+#
+# def print_numbers():
+#     thread_name = threading.current_thread().name
+#     for i in range(1, 6):
+#         print(f"{thread_name}: {i}")
+#
+# threads = []
+#
+# for i in range(1, 4):
+#     t = threading.Thread(target=print_numbers, name=f"Thread-{i}")
+#     threads.append(t)
+#     t.start()
+#
+# for t in threads:
+#     t.join()
+
+
+
+# 3. Write a Python program in which a thread accepts two integer arguments,
+# computes their sum, prints the result from inside the thread, and ensures that
+# the main thread waits until the worker thread completes execution.
+# import threading
+#
+# def add_numbers(a, b):
+#     result = a + b
+#     print(f"Sum inside thread: {result}")
+# t = threading.Thread(target=add_numbers, args=(10, 20))
+# t.start()
+# t.join()
+# print("Main thread finished after worker thread.")
+
+
+
