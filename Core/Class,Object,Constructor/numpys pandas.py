@@ -264,3 +264,253 @@
 
 
 
+#1. IMAGE BRIGHTNESS ADJUSTMENT (Broadcasting)
+# You are given a grayscale image represented as a 2D NumPy array.
+# Increase the brightness of the image by adding a constant value (e.g., +50)
+# using broadcasting. Ensure pixel values do not exceed 255.
+
+
+# import numpy as np
+#
+# image = np.array([[10, 40, 200],
+#                   [100, 220, 250]], dtype=np.uint8)
+#
+# brightness_increase = 50
+#
+# brightened = np.clip(image.astype(np.int16) + brightness_increase, 0, 255).astype(np.uint8)
+#
+# print(brightened)
+
+
+
+#
+# Q2. SENSOR DATA CLEANING (Boolean Indexing)
+# You receive temperature sensor data as a NumPy array.
+# Remove all invalid readings where values are less than -10 or greater than 50.
+
+# import numpy as np
+#
+# temps = np.array([12, -15, 8, 51, 22, -10, 50, 60, 3])
+#
+# cleaned = temps[(temps >= -10) & (temps <= 50)]
+#
+# print(cleaned)
+
+
+#Q3. NORMALIZATION FOR ML MODEL (Vectorization)
+# Given a dataset (NumPy array), normalize all values between 0 and 1
+# using min-max normalization.
+#
+#  Formula: (x - min) / (max - min)
+
+# import numpy as np
+#
+# data = np.array([10, 20, 30, 40, 50])
+#
+# normalized = (data - data.min()) / (data.max() - data.min())
+#
+# print(normalized)
+
+
+
+
+# Q4. MULTIPLE STORE SALES ANALYSIS (Axis operations)
+# You have sales data of 3 stores for 7 days stored in a 2D NumPy array.
+# Find:
+# - Total sales per store
+# - Average sales per day
+# import numpy as np
+#
+# sales = np.array([
+#     [120, 150, 130, 140, 160, 170, 180],
+#     [200, 210, 190, 220, 230, 240, 250],
+#     [ 90, 100, 110, 120, 130, 140, 150]
+# ])
+#
+# total_per_store = sales.sum(axis=1)
+# average_per_day = sales.mean(axis=0)
+#
+# print("Total sales per store:", total_per_store)
+# print("Average sales per day:", average_per_day)
+
+
+
+
+# Q5. MATRIX MULTIPLICATION IN RECOMMENDATION SYSTEM
+# You are given:
+# - User preference matrix
+# - Product feature matrix
+#
+# Perform matrix multiplication to compute recommendation scores.
+# import numpy as np
+#
+# user_preferences = np.array([
+#     [5, 3, 0],
+#     [4, 1, 2]
+# ])
+#
+# product_features = np.array([
+#     [1, 0, 1],
+#     [0, 1, 1],
+#     [1, 1, 0]
+# ])
+#
+# recommendation_scores = user_preferences @ product_features.T
+# print(recommendation_scores)
+
+
+
+
+# Q6. E-COMMERCE ORDER ANALYSIS (Filtering + Aggregation)
+# You are given a DataFrame with columns:
+# ["order_id", "customer", "amount", "status"]
+#
+# Tasks:
+# - Filter only completed orders
+# - Calculate total revenue
+# - Find top 3 highest orders
+
+# import pandas as pd
+#
+#
+# df = pd.DataFrame({
+#     "order_id": ["O1", "O2", "O3", "O4", "O5"],
+#     "customer": ["A", "B", "A", "C", "B"],
+#     "amount": [120, 250, 80, 300, 180],
+#     "status": ["completed", "pending", "completed", "completed", "completed"]
+# })
+#
+# completed_orders = df[df["status"] == "completed"]
+# total_revenue = completed_orders["amount"].sum()
+# top_3_orders = completed_orders.nlargest(3, "amount")
+#
+# print(completed_orders)
+# print("Total revenue:", total_revenue)
+# print(top_3_orders)
+
+
+
+
+
+# Q7. EMPLOYEE PERFORMANCE REPORT (GroupBy)
+# Given a dataset:
+# ["employee", "department", "salary"]
+#
+# Tasks:
+# - Find average salary per department
+# - Find department with highest average salary
+
+# import pandas as pd
+#
+# df = pd.DataFrame({
+#     "employee": ["Asha", "Ben", "Chen", "Divya", "Ethan"],
+#     "department": ["HR", "IT", "HR", "IT", "Finance"],
+#     "salary": [50000, 80000, 55000, 90000, 70000]
+# })
+#
+# avg_salary_by_dept = df.groupby("department")["salary"].mean()
+# highest_avg_dept = avg_salary_by_dept.idxmax()
+# highest_avg_value = avg_salary_by_dept.max()
+#
+# print(avg_salary_by_dept)
+# print("Department with highest average salary:", highest_avg_dept)
+# print("Highest average salary:", highest_avg_value)
+
+
+
+
+
+# Q8. DATA CLEANING PIPELINE (Missing Values)
+# You are given a dataset with missing values.
+#
+# Tasks:
+# - Identify missing values
+# - Fill missing values using mean
+
+# import pandas as pd
+#
+# df = pd.DataFrame({
+#     "age": [25, None, 30, 40],
+#     "salary": [50000, 60000, None, 80000]
+# })
+#
+# missing = df.isnull()
+# print(missing)
+#
+# df_filled = df.fillna(df.mean(numeric_only=True))
+#
+# print(df_filled)
+
+
+
+# Q9. LOG FILE ANALYSIS (String + DateTime)
+# You have a dataset with columns:
+# ["timestamp", "log_message"]
+#
+# Tasks:
+# - Extract year from timestamp
+# - Find logs containing "ERROR"
+# - Count number of errors per year
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+# Q10. MERGING MULTIPLE DATA SOURCES (Join/Merge)
+# You are given:
+# - Customers DataFrame
+# - Orders DataFrame
+#
+# Tasks:
+# - Merge both datasets on customer_id
+# - Find total purchase amount per customer
+
+# import pandas as pd
+#
+# customers = pd.DataFrame({
+#     "customer_id": [1, 2, 3],
+#     "customer_name": ["Asha", "Ben", "Chen"]
+# })
+#
+# orders = pd.DataFrame({
+#     "customer_id": [1, 1, 2, 3, 3],
+#     "order_id": ["O1", "O2", "O3", "O4", "O5"],
+#     "amount": [200, 150, 300, 100, 250]
+# })
+#
+# # Merge both datasets
+# merged_df = pd.merge(customers, orders, on="customer_id", how="inner")
+#
+# # Total purchase amount per customer
+# total_purchase = merged_df.groupby(["customer_id", "customer_name"])["amount"].sum().reset_index()
+#
+# print(merged_df)
+# print(total_purchase)
