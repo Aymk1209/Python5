@@ -48,13 +48,13 @@
 
 
 
-l=list(map(int,input().split()))
-m=min(l)
-for i in range(m,0,-1):
-    c=0
-    for j in range(len(l)):
-        if l[j]%i==0:
-            c+=1
-    if c==len(l):
-        print(i)
-        break
+# l=list(map(int,input().split()))
+# m=min(l)
+# for i in range(m,0,-1):
+#     c=0
+#     for j in range(len(l)):
+#         if l[j]%i==0:
+#             c+=1
+#     if c==len(l):
+#         print(i)
+#         break
