@@ -427,7 +427,7 @@
 # - Identify missing values
 # - Fill missing values using mean
 
-# import pandas as pd
+# import pandas as pdt
 #
 # df = pd.DataFrame({
 #     "age": [25, None, 30, 40],
@@ -514,3 +514,7 @@
 #
 # print(merged_df)
 # print(total_purchase)
+
+
+
+

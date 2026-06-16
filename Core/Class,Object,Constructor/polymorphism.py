@@ -257,34 +257,34 @@
 # • Subclass PremiumSavingsAccount → overrides again
 # but calls parent using super()
 # Show how polymorphism works across multiple levels.
-
-class Account:
-    def __init__(self,balance):
-        self.balance=balance
-    def withdraw(self,amount):
-        if amount<=self.balance:
-            self.balance=self.balance-amount
-            print(f"with drawn amount {amount}, remaining: {self.balance}")
-        else:
-            print("Insufficent balance")
-class SavingsAccount(Account):
-
-    def withdraw(self,amount):
-        min_balance = 500
-        if self.balance-amount<min_balance:
-            print("cant with draw min balance should be maitaiend")
-        else:
-            super().withdraw(amount)
-class PreAcc(SavingsAccount):
-    def withdraw(self,amount):
-        print("premium acc withdraw processing")
-        super().withdraw(amount)
-
-accounts=[Account(5000),SavingsAccount(5000),PreAcc(5000)]
-
-for acc in accounts:
-    print(acc.__class__.__name__)
-    acc.withdraw(4000)
+#
+# class Account:
+#     def __init__(self,balance):
+#         self.balance=balance
+#     def withdraw(self,amount):
+#         if amount<=self.balance:
+#             self.balance=self.balance-amount
+#             print(f"with drawn amount {amount}, remaining: {self.balance}")
+#         else:
+#             print("Insufficent balance")
+# class SavingsAccount(Account):
+#
+#     def withdraw(self,amount):
+#         min_balance = 500
+#         if self.balance-amount<min_balance:
+#             print("cant with draw min balance should be maitaiend")
+#         else:
+#             super().withdraw(amount)
+# class PreAcc(SavingsAccount):
+#     def withdraw(self,amount):
+#         print("premium acc withdraw processing")
+#         super().withdraw(amount)
+#
+# accounts=[Account(5000),SavingsAccount(5000),PreAcc(5000)]
+#
+# for acc in accounts:
+#     print(acc.__class__.__name__)
+#     acc.withdraw(4000)
 
 
 

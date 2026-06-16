@@ -2,24 +2,7 @@
 #• Write a Python program using a context manager (with) to open a text file in
 # read mode, read the entire content using read(), and print the number of
 # characters in the file
-# class Yogi:
-#     def __init__(self,fn,m='r'):
-#         self.fn=fn
-#         self.m=m
-#     def __enter__(self):
-#         self.file=open(self.fn,self.m)
-#         return self.file
-#     def __exit__(self, exc_type, exc_val, exc_tb):
-#         print("exited the cm")
-# with open("fg.py","r") as t:
-#     t.seek(0)
-#     c=0
-#     for i in t:
-#         c+=len(i)
-#         print(c)
-# with Yogi("fg.py","r")as yo:
-#     print(yo.read())
-from contextlib import contextmanager
+
 
 #2
 #  Write a program that opens a file using a context manager, reads all lines
