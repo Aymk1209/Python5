@@ -335,16 +335,16 @@
 
 #1
 
-file="hi.py"
-with open(file,"r") as file:
-    first_10=file.read(10)
-    print(f"print first 10 char:{first_10}")
-
-    pos=file.tell()
-    print(f"position of cuorser:{pos}")
-
-    begg=file.seek(0)
-    print(f"cursoer moved back position:{file.tell()}")
+# file="hi.py"
+# with open(file,"r") as file:
+#     first_10=file.read(10)
+#     print(f"print first 10 char:{first_10}")
+#
+#     pos=file.tell()
+#     print(f"position of cuorser:{pos}")
+#
+#     begg=file.seek(0)
+#     print(f"cursoer moved back position:{file.tell()}")
 
 
 

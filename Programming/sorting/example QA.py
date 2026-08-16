@@ -132,20 +132,138 @@
 # for i in range(r):
 #     row = list(map(int, input().split()))
 #     a.append(row)
-# c=0
+# cu=0
 #
 # for i in range(0,r):
 #     for j in range(0,c):
 #         if a[i][0]!=a[i][j]:
-#             c+=1
+#             cu+=1
 #             print("not eql")
-#         if c!=0:
+#         if cu!=0:
 #             break
-# if c==0:
+# if cu==0:
 #     print("eql row matrix")
 
 
 # to check given matrix is equall collomun matrix or not
+# r = int(input())
+# c = int(input())
+#
+# a = []
+# for i in range(r):
+#     row = list(map(int, input().split()))
+#     a.append(row)
+# cu=0
+#
+# for i in range(0,c):
+#     for j in range(0,r):
+#         if a[0][i]!=a[j][i]:
+#             cu+=1
+#             print("not eql")
+#         if cu!=0:
+#             break
+# if cu==0:
+#     print("eql col matrix")
+
+
+
+
+
+
+#matrix multiplication
+# Matrix Multiplication
+
+# r1 = int(input())
+# c1 = int(input())
+#
+# a = []
+# for i in range(r1):
+#     row = list(map(int, input().split()))
+#     a.append(row)
+#
+# r2 = int(input())
+# c2 = int(input())
+#
+# b = []
+# for i in range(r2):
+#     row = list(map(int, input().split()))
+#     b.append(row)
+#
+# if c1 != r2:
+#     print("Matrix multiplication not possible")
+# else:
+#     for i in range(r1):
+#         for j in range(c2):
+#             s = 0
+#             for k in range(c1):
+#                 s += a[i][k] * b[k][j]
+#             print(s, end=" ")
+#         print()
+
+
+
+
+#surroding elements
+ #1. sum of surroding elements in a matrix
+# r = int(input("Enter rows: "))
+# c = int(input("Enter columns: "))
+#
+# a = []
+#
+# print("Enter matrix elements:")
+# for i in range(r):
+#     row = list(map(int, input().split()))
+#     a.append(row)
+#
+# print("Element => Sum of surrounding elements")
+#
+# for i in range(r):
+#     for j in range(c):
+#         sum= 0
+#         if i-1>=0:
+#             sum+=a[i-1][j]
+#         if j-1>=0:
+#             sum+=a[i][j-1]
+#         if j+1<c:
+#             sum+=a[i][j+1]
+#         if i+1<r:
+#             sum+=a[i+1][j]
+#         if i+1<r and j-1>=0:
+#             sum+=a[i+1][j-1]
+#         if i+1<r and j+1<c:
+#             sum+=a[i+1][j+1]
+#         if i-1>=0 and j+1<c:
+#             sum+=a[i-1][j+1]
+#         if i-1>=0 and j-1>=0:
+#             sum+=a[i-1][j-1]
+#         print(a[i][j],"->",sum)
+#     print()
+
+
+
+
+
+# d={1:10,
+#    2:39,
+#    3:67,
+#    4:89,
+#    5:67}
+# print(sorted(d.items(),key=lambda x:x[1]))
+
+
+# def merge(l:list[list[int]]):
+#     l.sort(key=lambda x:x[1])
+#     res=l[0]
+#     for i in range(1,len(l)):
+#         if res[-1][1]>l[i][0]:
+#             res[-1][1]=max(res[-1][1],l[i][1])
+#         else:
+#             res.append(l[i])
+#     return res
+# l=list(map(int,input()))
+# merge(l)
+
+
 
 
 
